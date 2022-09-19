@@ -1,4 +1,4 @@
-package com.shalaby.ecommerc_shalaby
+package com.shalaby.ecommerce_demo
 
 import io.flutter.embedding.android.FlutterActivity
 
