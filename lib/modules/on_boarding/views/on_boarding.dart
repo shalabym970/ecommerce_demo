@@ -1,5 +1,8 @@
+import 'package:ecommerc_shalaby/modules/on_boarding/controller/onboarding_controller.dart';
 import 'package:ecommerc_shalaby/modules/on_boarding/widgets/dot_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_slider.dart';
 
@@ -8,6 +11,7 @@ class OnBoarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get. put(OnBoardingControllerImplement());
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

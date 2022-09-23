@@ -1,14 +1,20 @@
+import 'package:ecommerc_shalaby/modules/on_boarding/controller/onboarding_controller.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../data/data_source/static/static.dart';
 
-class CustomSliderOnBoarding extends StatelessWidget {
+class CustomSliderOnBoarding extends GetView<OnBoardingControllerImplement> {
   const CustomSliderOnBoarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+        onPageChanged: (val) {
+          controller.onPageChanged(val);
+        },
         itemCount: onBoardingList.length,
         itemBuilder: (context, i) => Column(
               children: [
